@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    let diceArray = ["dice1", "dice2", "dice3", "dice4", "dice5", "dice6"]
+    
     var indexDice1 : Int = 0
     var indexDice2 : Int = 0
     
@@ -27,6 +29,10 @@ class ViewController: UIViewController {
         indexDice2 = Int.random(in: 0 ... 5)
         
         print(indexDice1)
+        
+        diceImage1.image = UIImage(named: diceArray[indexDice1])
+        
+        diceImage2.image = UIImage(named: diceArray[indexDice2])
     }
     
 }
